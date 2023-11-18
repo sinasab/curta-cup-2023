@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.8.13;
-import { IPuzzle } from "./interfaces/IPuzzle.sol";
+import { IPuzzle } from "../interfaces/IPuzzle.sol";
 
 struct service {
     function(uint32, uint256) internal helper;
@@ -12,7 +12,7 @@ enum Mode {
     Maintenance
 }
 
-contract Challenge is IPuzzle {
+contract Puzzle19 is IPuzzle {
     mapping(address => service) private serv;
     mapping(address => Mode) public mode;
     mapping(address => uint256) public victim;

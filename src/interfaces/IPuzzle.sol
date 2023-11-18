@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.17;
+pragma solidity ^0.8.13;
 
 /// @title The interface for a puzzle on Curta
 /// @notice The goal of players is to view the source code of the puzzle (may
