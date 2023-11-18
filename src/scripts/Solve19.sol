@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-import "forge-std/Script.sol";
+import {Script} from "forge-std/Script.sol";
 import {Puzzle19, Mode} from "../puzzles/Puzzle19.sol";
 import {ICurta} from "../interfaces/ICurta.sol";
 
@@ -25,7 +25,7 @@ contract Solve19 is Script {
         PUZZLE.setSlot(servSlot, servVal);
         PUZZLE.applySlot();
         // Ok we're all set up, now let's call solve.
-        PUZZLE.solve(123, 123);
+        PUZZLE.solve(123, 123); // I think these params don't matter?
         uint256 solution = uint256(uint160(SOLVER));
         CURTA.solve(PUZZLE_NUM, solution);
         vm.stopBroadcast();
